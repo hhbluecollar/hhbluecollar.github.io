@@ -1,5 +1,9 @@
+/*     
+        Name : Henok Hussen Hamza
+        This is CSS file for assignment on day 2. The assignment creates a recipe web site for a fictional pie company named Granny's Pies. 
+*/
 body{
-    width: 768px;
+    width: 900px;
     height: 1024px;
     margin: auto;
     background-color: white;
@@ -8,8 +12,8 @@ body{
     font-family:Georgia, Garamond, sans-serif;
     background: url("http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/silverware.jpg");
     background-attachment: fixed;
-
 }
+
 h1 {
 
     text-decoration: underline;
@@ -28,13 +32,12 @@ h1 {
     background-color: #F0F0F0;
     color:  #A4A400 ;
     width: max-content;
-
 }
+
  section h1{
     background-color: rgba(243, 247, 242, 0.74);
     text-decoration: underline;
     color: rgb(169, 199, 100);
-
 }
 
 a{
@@ -44,7 +47,6 @@ a{
 span {
 width: fit-content;
 background-color: #F0F0F0;
-
 }
 
 footer {
@@ -59,9 +61,8 @@ footer {
 }
 
 .userComment{
-    height: fit-content;
     background: lightyellow;
-    margin: 2rem 2rem;
+    margin: 1rem 1rem;
 }
 
 #linksSection a{
