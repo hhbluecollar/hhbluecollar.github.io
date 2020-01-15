@@ -1,0 +1,66 @@
+body{
+    background-color: orange;
+}
+#moodImages img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+}
+#icon img {
+    height: 4rem;
+    margin-top: 1rem;
+}
+#icon {
+    font-size: 50px;
+    display: inline;
+    margin-left: 20%;
+    text-decoration: none;
+}
+#icon a:visited{
+    color: black;
+}
+
+.neighbors{
+    font-family: Arial,Arial Black,Verdana,Trebuchet MS,Georgia,Tahoma,Courier New,Times New Roman;
+    font-weight: bold;
+    text-align: left;
+
+}
+
+#neighborsTitle{
+    font-weight: bolder;
+    font-style: oblique;
+    text-align: left;
+}
+
+
+footer {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    float: right;
+    padding-bottom: 5px;
+}
+
+ol { 
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li {
+    flex: 0 0 auto;
+}
+
+/* ol {
+    transform: rotate(180deg);
+}
+ol > li {
+    transform: rotate(-180deg);
+} */
+
+dt{
+    color: rgb(255, 0, 119);
+}
