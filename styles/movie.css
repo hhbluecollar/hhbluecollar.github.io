@@ -1,0 +1,130 @@
+body{
+    background-image: url("../images/background.png");
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0px;
+    padding:0px
+}
+.banners{
+    background-image: url("../images/bannerbg.png");
+    background-repeat: repeat;
+    background-size: 50px;    
+}
+.banners img{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50%;
+}
+#title{
+    text-shadow: 3px 3px rgb(102, 100, 100);
+    text-align: center;
+    font-weight: bold;
+    font-size: 24pt;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-shadow:  #999999;
+}
+main{
+    border-radius: 20px;
+    border: 4px solid grey;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    width: 800px;
+} 
+#overview{
+    float: right;
+    width: 250px;
+    border-top-right-radius: 15px; 
+    font-weight: 8pt;
+    font-family: Arial, sans-serif;
+    background-color: #A2B964;
+
+}
+#overview-image{
+    width: 100%;
+    border-top-right-radius: 15px; 
+} 
+#overview-movie-details{
+    padding-left: 10px;
+    margin: 0 auto;
+
+}
+#overview-movie-details dt{
+    font-weight: bold;
+    margin-top:10pt;
+}
+
+#overview-movie-details dd{
+    border-radius: 15px;
+}
+#overview-movie-details dd ul{
+    list-style-type:none;
+    padding-left: 0px;
+}
+#review-banner{
+    background-image: url(../images/rbg.png);
+    background-repeat: repeat; 
+    background-size: 83px;
+    border-top-right-radius: 15px;   
+    border-top-left-radius: 15px;
+}
+#review-banner img{
+    border-top-left-radius: 15px;
+}
+#percent{
+    font-size: 48pt;
+    vertical-align: bottom;
+    color: red;
+    font-weight: bolder;
+}
+
+#comments {
+    float: left;
+    width: 550px;
+    column-count:2;
+    column-width: 47%;
+    column-gap: 0px;
+}
+.commenter-comment{
+    padding: 4%;
+}
+.a-comment{
+    border: 2px solid grey;
+    font-weight: 8pt;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color:#E8DC9B;
+    padding: 8px; 
+    margin: 0px;
+    overflow: hidden;
+}
+ .a-comment img{
+    vertical-align: top;   
+    float: left;
+
+} 
+.a-commenter p{
+    font-size: 13px;    
+}
+
+.a-commenter img{
+    margin-right: 5px;
+    float: left;
+}
+#page-number{
+    text-align: center;
+    background-color: #A2B964;
+    padding: 5px;
+    clear: both;
+    margin: 0px;
+}
+.validators  {
+    position: fixed;
+    bottom:0;
+    right:0;
+}
+.publication{
+    font-style:italic;
+}

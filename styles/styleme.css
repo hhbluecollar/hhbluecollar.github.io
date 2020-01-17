@@ -9,6 +9,7 @@ body{
 #icon img {
     height: 4rem;
     margin-top: 1rem;
+    /* vertical-align:baseline; */
 }
 #icon {
     font-size: 50px;
@@ -63,4 +64,10 @@ ol > li {
 
 dt{
     color: rgb(255, 0, 119);
+}
+
+.movie-detial{
+    margin-left: 35px;
+    margin-top: -10px;
+
 }

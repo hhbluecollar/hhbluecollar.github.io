@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+  }
+
+  header {
+    background-color: aqua;
+    padding: 5px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  main {
+    display: -webkit-flex;
+    display: flex;
+  }
+nav{
+    display: flex;
+    background-color: rgb(5, 12, 77);
+    color: white;
+    padding: 5px;
+    text-decoration: none;
+
+}
+nav>a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid black;
+
+}
+a:hover{
+    background-color: #111;
+}
+  section {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+main{
+    flex-wrap: wrap;
+}
+  footer {
+    background-color: rgb(5, 12, 77);
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  #col1{
+    background-color:#aaa;
+}
+#col2{
+    background-color:#bbb;
+}
+#col3{
+    background-color:#ccc;
+}
+
+@media screen and (max-width:599px) {
+    #col3 {
+        width: 100%;
+      } 
+      #col2 {
+        width: 50%;
+    }
+        #col1 {
+            width: 50%;
+        }          
+}
