@@ -23,7 +23,6 @@ body{
     font-weight: bold;
     font-size: 24pt;
     font-family: Tahoma, Verdana, sans-serif;
-    text-shadow:  #999999;
 }
 main{
     border-radius: 20px;
@@ -37,7 +36,7 @@ main{
     float: right;
     width: 250px;
     border-top-right-radius: 15px; 
-    font-weight: 8pt;
+    font-size: 8pt;
     font-family: Arial, sans-serif;
     background-color: #A2B964;
 
@@ -84,7 +83,6 @@ main{
     float: left;
     width: 550px;
     column-count:2;
-    column-width: 47%;
     column-gap: 0px;
 }
 .commenter-comment{
@@ -92,7 +90,7 @@ main{
 }
 .a-comment{
     border: 2px solid grey;
-    font-weight: 8pt;
+    font-size: 8pt;
     font-weight: bold;
     border-radius: 10px;
     background-color:#E8DC9B;
