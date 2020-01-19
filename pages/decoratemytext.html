@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+	<head>
+        <!-- 
+            I worked on this assignment for 3 hours. It was a learning by practice 
+            as I jumped in before reading all the topics. I learned how to write 
+            unobtrusive js code making the content part totally independent from 
+            the  behavior part. I also learned how to implement functional methods 
+            in js. One another thing I face was that I needed hard refresh to see the 
+            update result of my page. 
+         -->
+		<title>Text Decorator</title>
+		<link href="../styles/decoratemytext.css" type="text/css" rel="stylesheet" />
+
+		<!--
+		This is a widely-used JavaScript library named jQuery that has
+		many useful functions which we need.
+		Please don't remove this link or change its URL; leave it as-is!
+		-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+		<!-- link to your script file here -->
+		<script src="../scripts/decoratemytext.js"></script>
+	</head>
+
+	<body>
+		<h1>Text Decorator</h1>
+		
+		<div>
+			<img src="../images/decorated.gif" alt="very decorated!" />
+		</div>
+
+        <!-- Your UI controls go here -->             
+        
+        <fieldset id="text-fieldset">
+             <legend class="legend">Text</legend>
+            <textarea  id="textarea" rows="4" cols="30" placeholder="Write some text here.">
+        </textarea> 
+    </fieldset>
+
+    <fieldset>
+        <legend class="legend">Decoration</legend>
+        <button id="btn-decoration">Bigger Decorations!</button>
+        <button id="btn-igpay">Igpay Atinlay</button>
+        <button id="btn-malkovitch">Malkovitch</button>
+        <div><label for="bling">Bling</label>
+            <input id="bling"  type="checkbox"  onchange="changeAlert()">
+        </div>
+</fieldset>
+
+<hr>
+        <div class="w3c">
+            <a href="https://validator.w3.org/check/referer"><img src="../images/w3c-html.png" alt="Valid HTML5" /></a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer"><img src="../images/w3c-css.png" alt="Valid CSS" /></a>
+            <a href="https://webster.cs.washington.edu/jslint/referer"><img src="http://mumstudents.org/jshint/jshint-small.png" alt="Valid JS"/></a>                                
+        </div>	
+        <p> Copyright &copy; 2020 Henok Hussen <br>
+            Maharish International University <br>
+            All rights reserved
+        </p>	
+	</body>
+</html>

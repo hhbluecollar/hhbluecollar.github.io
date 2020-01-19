@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 
+    To complete the basic coding task it took me close to 1 hr. While doing this assignment I have learned the following:
+            - How to add an element to an array. While accessing an element is same as Java but 
+              adding an element is way different. I learned that I have to use 'push' or 'unshift'. 'unshift' adds the 
+              new element at the beginning.
+            - The different types of for() loops available in js: for....in , for....of , for()
+            - How to attache js files to the head of our html code separating the behavior from the content of our page. 
+ -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introduction to Javascript</title>
+    <link rel="stylesheet" href="../styles/jsintro.css">
+    <script src="../scripts/jsintro2.js"></script>
+    <!-- <script src="../scripts/test.js"></script> -->
+</head>
+<body>
+    <header><h2>WELCOME!</h2></header>
+
+    <div class="container">
+    <nav>
+        <div class="selection-text">
+            <h3>Please selection the function you want to test.</h3>
+        </div>
+        <dl>               
+            <dt><button id="btnSum" onclick="sum([1,2,3,4,5]);">Sum</button>  </dt>
+            <dd>Sum inputs of an array.</dd>
+            <dt><button id="btnMultiply" onclick="multiply([1,2,3,4,5]);">Multiply</button></dt>
+            <dd>Multiply inputs of an array.</dd>
+            <dt><button id="btnReverseString" onclick="stringReverse('Henok');">Reverse String</button> </dt>       
+            <dd>Reverses an input String.</dd>
+            <dt><button id="btnLongList" onclick="filterLongWords(['Henok','Hussen','Abel','Tesh','Mulu'],4);">Longest List </button></dt>
+            <dd>Returns the list of strings with length greater than a value.</dd>            
+          </dl>   
+     </nav>
+     <main>
+         <h3>Click your choice and check the result in Chrome developer console (CTRL_SHIFT_J). </h3>
+     </main>
+    </div>
+    <footer>
+        <div>
+            <a href="https://validator.w3.org/check/referer">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"
+                    style="padding-top: 1rem;" />
+            </a>
+
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="html validator"
+                    style="padding-top: 1rem;" />
+            </a>
+        </div>
+        <p> Copyright &copy; 2020 Henok Hussen <br>
+            Maharish International University <br>
+            All rights reserved
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,8 @@
+textarea{
+    border: 1px solid  black;
+}
+
+.legend{
+    font-size: large;
+    font-weight: bold;
+}
