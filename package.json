@@ -1,0 +1,15 @@
+ {
+  "name": "test",
+  "version": "1.0.0",
+  "description": "w2d1 assignment",
+  "main": "mochatest.js",
+  "scripts": {
+    "test": "mocha||true"
+  },
+  "author": "Henok HH",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.0.0"
+  }
+}

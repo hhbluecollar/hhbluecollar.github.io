@@ -1,7 +1,7 @@
 /*
 	This function compares two inputs and returns the larges one
 */
-	function maxTwo(a,b){
+ 	function maxTwo (a,b){
 		if(a>b) {
 			console.log("max of [4,5] is : "+ a);
 			return a; 
@@ -11,7 +11,8 @@
 			return b;
 			
 		}
-    }
+	}		
+								
 /*
 	This function compares three inputs and returns the larges one
 */
