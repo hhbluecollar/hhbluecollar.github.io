@@ -22,12 +22,13 @@ nav{
 
 }
 nav>a{
-    display: block;
+    display: flex;
     color: white;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     border: 1px solid black;
+    flex-wrap: wrap;
 
 }
 a:hover{
