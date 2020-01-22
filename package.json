@@ -9,7 +9,7 @@
   "author": "Henok HH",
   "license": "ISC",
   "devDependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^7.0.0"
+    "chai": "*",
+    "mocha": "*"
   }
 }

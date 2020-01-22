@@ -10,51 +10,23 @@ and the tests are in the mochatest.js file
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Introduction to Javascript</title>
-
-
+    
+    <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet"/>
     <link rel="stylesheet" href="../styles/jsintro.css">
-    <script src="../scripts/mochajsintro.js"></script>
-    <script src="../test/mochatest.js"></script>
 </head>
 <body>
     <header><h2>WELCOME!</h2></header>
 
-    <div class="container">
-    <nav>
-        <div class="selection-text">
-            <h3>Please selection the function you want to test.</h3>
-        </div>
-        <dl>
-            <dt><button id = "btnMaxTwo" onclick="maxTwo(5,4);">Max two </button></dt>
-            <dd>To see the maximum of two inputs.</dd>
-            <dt><button id = "btnMaxThree" onclick="maxThree(5,4,9);">Max three </button> </dt>
-            <dd>To see the maximum from three inputs.</dd>
-            <dt><button id = "btnVowel" onclick="isVowel('a');">Is vowel </button> </dt>
-            <dd>To check if an input letter is a vowel or not.</dd>
-            <dt><button id="btnSum" onclick="sum([1,2,3,4,5]);">Sum</button>  </dt>
-            <dd>Sum inputs of an array.</dd>
-            <dt><button id="btnMultiply" onclick="multiply([1,2,3,4,5]);">Multiply</button></dt>
-            <dd>Multiply inputs of an array.</dd>
-            <dt><button id="btnReverseString" onclick="stringReverse('Henok');">Reverse String</button> </dt>
-            <dd>Reverses an input String.</dd>
-            <dt><button id="btnLonges" onclick="findLongestWord(['Hussen','Girma','Henok','Blein']);">Longest Word</button> </dt>
-            <dd>Returns the longest word for an array of Strings.</dd>
-            <dt><button id="btnLongList" onclick="filterLongWords(['Henok','Hussen','Abel','Tesh','Mulu'],4);">Longest List </button></dt>
-            <dd>Returns the list of strings with length greater than a value.</dd>
-            <dt><button id="map" onclick="multiplyByTen();">Multiply 10 - Map</button></dt>
-            <dd>To see the operations of Map functions on an array.</dd>      
-            <dt><button id="filter" onclick="ElementOf3();"> Filter 3</button></dt>
-            <dd>To see the operations of Filter functions on an array.</dd>             
-            <dt><button id="reduce" onclick="arrayProduct();"> Reduce-Multiply </button></dt>
-            <dd>To see the operations of Reduce functions on an array.</dd>     
-          </dl>   
-     </nav>
-     <main>
-         <h3>Click your choice and check the result in Chrome developer console (CTRL_SHIFT_J).
-            <br> to run it please include the test and mocha js file in a project and test is.
-            <br>Unfortunately, I am not able to run it on browsers yet.      
-        </h3>
-     </main>
+    <div id="mocha"></div>
+
+    <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+    <script src="../scripts/chai.js" type="text/javascript"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <script src="../scripts/mochajsintro.js"></script>
+    <script src="../test/mochajsintroTest.js"></script>
+
+    <div class="container"> 
     </div>
     <footer>
         <div>
@@ -74,9 +46,9 @@ and the tests are in the mochatest.js file
         </p>
     </footer>
 
-    <!-- <link href="https://cdn.rawgit.com/mochajs/mocha/2.2.5/mocha.css" rel="stylesheet" />
-    <script src="../scripts/chai.js"></script>
-    <script>mocha.setup('bdd')</script> -->
-  
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
 </body>
 </html>

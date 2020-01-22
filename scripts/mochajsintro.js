@@ -1,20 +1,18 @@
 /*
 	This function compares two inputs and returns the larges one
 */
-module.exports=	{
-	 maxTwo:function (a,b){										
+function maxTwo(a,b){										
 		if(a>b) {
 			return a; 
 		}
 		else {
-			return b;
-			
+			return b;			
 		}
-	}				
+ 	}				
 /*
 	This function compares three inputs and returns the larges one
 */
-, maxThree:function (a,b,c){
+ function maxThree(a,b,c){
 		let max=0;
 
 		if(a>b){ 
@@ -40,7 +38,7 @@ module.exports=	{
 /*
 	This function checks if an input is a vowel
 */
-, isVowel : function (ch){  
+  function isVowel(ch){  
 	if(ch === 'a' || ch === 'e' || ch === 'i' || ch ==='o' || ch === 'u' ) 
 		return true ; 
 	else 
@@ -50,7 +48,7 @@ module.exports=	{
 /*
 	This function sums the elements of an input array
 */
-, sum : function (arr){
+   function sum(arr){
 		let sum = 0;
 		for( const i of arr){
 			sum+=i;
@@ -62,7 +60,7 @@ module.exports=	{
 /*
 	This function multiply the elements of an input array
 */
-, multiply : function (arr){
+  function multiply(arr){
 		let mul = 1;
 		for( const i of arr){
 			mul*=i;
@@ -74,7 +72,7 @@ module.exports=	{
 /*
 	This function reverses a string input
 */
-, stringReverse : function (input){     
+  function stringReverse(input){     
 		let reversedInput = "";
 			for (let i = input.length - 1; i >= 0; i--) { 
 				reversedInput += input[i];
@@ -87,9 +85,9 @@ module.exports=	{
 /*
 	This function returns the longes word from an array of word inputs
 */
-, findLongestWord : function (arr){
+  function findLongestWord(arr){
 		let longest = "";
-		    for( const i of arr){
+		    for( let i of arr){
 				if(i.length>longest.length)
 					longest = i;
 			}
@@ -99,7 +97,7 @@ module.exports=	{
 /*
 	This function returns the list of longes words from an array of word inputs lengths greater than  a given length 
 */
-, filterLongWords : function  (arr,num){
+ function filterLongWords (arr,num){
 		let longestList = [];
 		    for( let i of arr){
 				if(num<i.length)
@@ -112,51 +110,54 @@ module.exports=	{
 /*
 	This function multiplies each element of an array by 10
 */
-, multiplyByTen : function (){
-        const a = [1,3,5,3,3]; 
-        a.map(function(elem, i, array) {
-                             return elem * 10;
-                       })
+
+
+ function multiplyByTen(){
+	const c = [1,2,3]; 
+	const e = c.map(function(elem, i, array) {
+	  return elem *10;
+	})
+	return e;
 	}
 
 /*
 	This function selects each element of an array with value of 3
 */
-, elementOf3 : function (){
+ function elementOf3(){
         const a = [1,3,5,3,3]; 
 
         const c = a.filter(function(elem, i, array){
                              return elem === 3;
-                            });
+							});
+							return c;
 	}
 
 /*
 	This function multiplies each element of an array each other
 */
-, arrayProduct : function (){
-        const a = [1,3,5,3,3]; 
+ function arrayProduct(){
+        const a = [1,2,3,4]; 
 
         const d = a.reduce(function(prevValue, elem, i, array){
                                  return prevValue * elem;
-                                 });
+								 });
+								 return d;
 	 }
-
-
 
 	 
 //=========================================================================
 
-,myMap:function (arr, mapFunc) { 
+function myMap(arr, mapFunc) { 
 
 	const mapArr = [];      
 	 for(let i=0;i<arr.length;i++) {        
 	   const result = mapFunc(arr[i], i, arr);       
 		mapArr.push(result);   
 	   }   
-		return mapArr;
-	  }
+		return mapArr;  
+	}
 
-	 , myFilter: function (arr, filterFunc) {    
+ function myFilter(arr, filterFunc) {    
 	const filterArr = [];  
 	 for(let i=0;i<arr.length;i++) {        
 	   const result = filterFunc(arr[i], i, arr);        
@@ -165,6 +166,6 @@ module.exports=	{
 		 }   
 	return filterArr;
   }
-}
+
 
 
