@@ -102,11 +102,13 @@
         });
   
 
-        it('Assertion Pass. Implementation of my filter numbers under 10 & above 5 [6,7,8,9].', function(){
+        it('Assertion Pass. Implementation of my filter numbers under 10 & above 5 are [6,7,8,9].', function(){
           assert.equal(areEqualArrays(myFilter([1,2,3,4,5,6,7,8,9],s=>s>5 ),[6,7,8,9]),true);
-        });      it('Assertion Pass: Implementation of my filter numbers under 10 & above 8 is only[9].', function(){
+        });     
+        it('Assertion Pass: Implementation of my filter numbers under 10 & above 8 is only [9].', function(){
           assert.equal(areEqualArrays(myFilter([1,2,3,4,5,6,7,8,9],s=>s>8 ),[9]),true);
-        });      it('Assertion Fail: Implementation of my filter numbers under 10 & above 5 [6,7,8,9].', function(){
+        });     
+         it('Assertion Failed: Implementation of my filter numbers under 10 & above 5 are [6,7,8,9].', function(){
           assert.equal(areEqualArrays(myFilter([1,2,3,4,5,6,7,8,9],s=>s>1 ),[3,4,5,6,7,8,9]),true);
         });
       });
