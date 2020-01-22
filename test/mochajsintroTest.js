@@ -1,5 +1,4 @@
-   
-          "use strict";
+   "use strict";
       
       function myFunctionTest(expected, found) {
         if (expected === found) {
@@ -91,6 +90,7 @@
         });
         
        // =============================MAP and FILTER=========================
+       
         it('Assertion Pass: product of [1, 2, 3] by 10 is [10,20,30].', function(){
           assert.equal(areEqualArrays(myMap([1,2,3],s=>s*10 ),[10,20,30]),true);
         });

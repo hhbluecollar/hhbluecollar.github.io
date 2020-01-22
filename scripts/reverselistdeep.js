@@ -1,49 +1,47 @@
-    "use strict";
-//========================== REVERSE and REVERSEINPLACE============
-    function reverseArray(arr) {
+//========================== REVERSE and REVERSE IN PLACE============
+    
+//(function(){
+        "use strict";
+        //go through each array element starting from end
+        //and copy it to a new array to be returned.
+        function reverseArray(arr) {
         let newArray = [];
         for (let i = 0; i < arr.length; i++) {
             newArray[i] = arr[arr.length - i - 1];
         }
         return newArray;
     }
-
-
+    //traverse the array forward while saving each value in a temporary 
+    //variable and swapping it to its symmetric location after half length
     function reverseArrayInPlace(arr) {
         for (let i = 0; i < arr.length / 2; i++) {
-            let tmp = arr[i];
+            let temp = arr[i];
             arr[i] = arr[arr.length - i - 1];
-            arr[arr.length - i - 1] = tmp;
+            arr[arr.length - i - 1] = temp;
         }
         return arr;
-
     }
 
     console.log(reverseArray([ "A", "B", "C" ]));
     let arrayValue = [ 1, 2, 3, 4, 5 ];
     reverseArrayInPlace(arrayValue);
     console.log(arrayValue);
-
-
+//}());
 
 //========================== LIST============
 
-
-    (function() {
-        "use strict";
-    
+   // (function() {
+        "use strict";    
         function arrayToList(arr) {
-            let retVal = {
-    
+            let retVal = {    
                 rest : null
     
             };
     
             for (let i = 0; i < arr.length; i++) {
     
-                if (retVal.rest === null) { // if its first element in list
-                    retVal.value = arr[i]; // dynamically adding value attribute to
-                    // retVal object
+                if (retVal.rest === null) { 
+                    retVal.value = arr[i]; 
                     retVal.rest = {
     
                         rest : null
@@ -66,7 +64,6 @@
             return retVal;
     
         }
-        console.log(arrayToList([ 1, 2, 3 ]));
     
         function listToArray(list) {
     
@@ -81,44 +78,24 @@
             return arr;
     
         }
-    
-        console.log(listToArray({    //This is simple test to check if given list can be converted to array.
-            value : 1,
-            rest : {
-                value : 2,
-                rest : {
-                    value : 3,
-                    rest : null
-                }
-            }
-    
-        }))
-    
-        console.log(listToArray(arrayToList([ 9, 8, 7, 6, 5, 4, 3, 2, 1, 0 ])));
-    
+  
+
         function prepend(element, list) {
-            return { // appending at beginning is simplest i found
+            return { 
                 value : element,
                 rest : list
             };
     
         }
     
-        console.log(prepend(10, prepend(20, null)));
     
         function nth(list, index) {
             return listToArray(list)[index];
-            // I used this function listToArray() already written above so code re-use for me
-            // after that i got the index of that array to return.
-            // I have not checked for index out of bound condition
-            // I assumed index will be with in bound for simplicity
+        
         }
     
-        function nthNextMethod(list, index) {       // This is same function() that works as nth()
-            // I went through while loop until list is not null
-            //every time i decreased index by 1 and updated list as next list
-            while (list !== null) {                 // when index===0 that's the data I was looking for.
-                // simply return list.value now.
+        function nthNextMethod(list, index) {      
+            while (list !== null) {                
                 if (list.value !== undefined) {
     
                     if (index-- === 0) {
@@ -133,19 +110,83 @@
     
         function recursiveNth(list, index) {
     
-            if (index === 0)
-    
+            if (index === 0)    
                 return list.value;
     
-            return recursiveNth(list.rest, --index);    //This is simplest recursive I have found for this purpose
+            return recursiveNth(list.rest, --index);   
     
         }
     
-        console.log(recursiveNth(arrayToList([ 10, 20, 30 ]), 1));  //These are sample data from given assignment pdf file
+        console.log(recursiveNth(arrayToList([ 10, 20, 30 ]), 1));  
         console.log(nth(arrayToList([ 10, 20, 30 ]), 1));
-        console.log(nthNextMethod(arrayToList([ 10, 20, 30 ]), 1));
+        console.log(nthNextMethod(arrayToList([ 10, 20, 30 ]), 1));    
     
-        console.log("==============================================");
+    //}());
     
-    }());
-    
+
+    //========================== DEEP COMPARISON ============
+
+
+   // (function () {
+    "use strict";
+
+    /**
+     * Compares two objects for equal values in all properties and recursively for any objects that are property values
+     * @param a any object
+     * @param b another object to be compared
+     * @returns {boolean} true if they are deep equal, else false
+     */
+    function deepEqual(a, b) {
+        /* check to see if equal primitive values or same object reference */
+        if (a === b) {return true; }
+
+        /* must both be objects or else cannot have equal values (after first test)*/
+        if (a === null || typeof a !== "object" ||
+            b === null || typeof b !== "object") { return false;}
+
+        let keysA = Object.keys(a), keysB = Object.keys(b);
+
+        /* must have same number of properties */
+        if (keysA.length !== keysB.length) {return false; }
+
+        /* must have all the same properties and the values of properties must be the same */
+        for (let key of keysA) {
+            if (!keysB.includes(key) || !deepEqual(a[key], b[key])) {return false; }
+        }
+
+        return true;
+    }
+
+    let obj = {here: {is: "an"}, object: 2};
+    console.log(deepEqual(obj, obj));
+// → true
+    console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+    console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
+    console.log(deepEqual(null, null));
+    const x = {a:1, b:2};
+    const y = x;
+    console.log(deepEqual(x, y));
+
+
+    // context("Test cases: Deep Comparison" , function () {
+    //     let longWords;
+    //     beforeEach(function () {
+    //         let obj = {here: {is: "an"}, object: 2};
+    //     });
+
+    //     describe("testing deepEqual", function () {
+    //         it("object equal to itself", function () {
+    //             assert.isTrue(deepEqual(obj, obj));
+    //         });
+    //         it("2 objs of equal values", function () {
+    //             assert.isTrue(deepEqual(obj, {here: {is: "an"}, object: 2}));
+    //         });
+    //         it("similar but not equal objs", function () {
+    //             assert.isFalse(deepEqual(obj, {here: 1, object: 2}));
+    //         });
+    //     });
+    // });
+
+//}());
