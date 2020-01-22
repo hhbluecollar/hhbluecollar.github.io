@@ -1,5 +1,5 @@
-      
-      
+   
+          "use strict";
       
       function myFunctionTest(expected, found) {
         if (expected === found) {

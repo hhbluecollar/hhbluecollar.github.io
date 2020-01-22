@@ -1,3 +1,5 @@
+"use strict";
+
 /*
 	This function compares two inputs and returns the larges one
 */
