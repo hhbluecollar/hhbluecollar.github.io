@@ -6,14 +6,49 @@
     the old one was also affected as the copy was by reference. So, i figured it out that 
     i can use spread [...array] to make a shallow copy. 
  -->
-
+ 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../styles/jsintro.css">
+
     <title>Inheritance</title>
 </head>
 <body>
-    
+    <header><h2>WELCOME!</h2></header>
+    <span><h2>To see log results please use Chrome developer console (CTRL_SHIFT_J). </h2>  </span>
+
+    <div id="mocha"></div>
+
+    <script src="https://unpkg.com/mocha@4.0.1/mocha.js"></script>
+    <script src="../scripts/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+
+    <script src="../scripts/inheritance.js"></script>
+
+
+    <footer>
+        <div>
+            <a href="https://validator.w3.org/check/referer">
+                <img src="http://mumstudents.org/cs472/2014-09/images/w3c-html.png" alt="html validator"
+                    style="padding-top: 1rem;" />
+            </a>
+
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img src="http://mumstudents.org/cs472/2013-09/images/w3c-css.png" alt="html validator"
+                    style="padding-top: 1rem;" />
+            </a>
+        </div>
+        <p> Copyright &copy; 2020 Henok Hussen <br>
+            Maharish International University <br>
+            All rights reserved
+        </p>
+    </footer>
+    <script>
+        mocha.checkLeaks();
+        mocha.run();
+    </script>
 </body>
 </html>
