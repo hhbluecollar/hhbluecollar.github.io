@@ -2,9 +2,11 @@
 
 //==============================Banned work filter===========================
 (function (){
-    "user strict"
-
-
+    "user strict";
+        /**
+         * banned words filter which will be added to the String Object property
+         * @returns {newArray} the filtered output
+         */
     String.prototype.bannedFilter = function (arr){
         let str = this.split(" ");
         let newArray = [...str];
@@ -40,8 +42,11 @@ console.log("WAP TA is the best TA from all over MIU lol".bannedFilter(['the','T
 //============================== Bubble sort ===========================
 
 (function(){
-    "use strict"
-
+    "use strict";
+        /**
+         * simple implementation of bubble sort algorithm to the Array Object
+         * @returns {this} the filtered output
+         */
     Array.prototype.bubbleSort = function(){
        for(let m=0;m<this.length;m++){
         for(let i=0;i<this.length-1;i++){
@@ -74,6 +79,11 @@ console.log([6,4,0, 3,-2,1,9].bubbleSort());
 //============================== Teacher Student ===========================
 
 (function(){
+
+    "use strict";
+        /**
+         * simple demonstration of inheritance for a teach and the course he teaches inheriting for a person class
+         */
     var Person = function() {};
 
 Person.prototype.initialize = function(name, age){
