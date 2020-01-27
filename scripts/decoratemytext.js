@@ -9,6 +9,7 @@
         document.getElementById("btn-igpay").onclick = igpay;
 
   }
+  
 /*
     this function the basic layouts for the text area properties.
 */
@@ -21,7 +22,6 @@
     //setInterval(changeSize, 500);
     setTimer();
 }
-
 
 /*
     this function the basic layouts while the Bling checkbox is clicked.
@@ -56,6 +56,7 @@ function isVowl(ch){
 	  else 
         return false;    
     }
+
     /*
 this function implements the igapay rule affecting the inputs in the textarea.
 */
@@ -78,6 +79,7 @@ function igpay(){
     }
     document.getElementById("textarea").value=str.join(" ");
 }
+
     /*
 this function implements the Malkovich rule affecting the inputs in the textarea with 
 size >=5.
