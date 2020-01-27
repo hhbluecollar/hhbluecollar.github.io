@@ -1,4 +1,74 @@
 
+//==============================Exercises===========================
+
+
+(function(){
+    "use strict";
+
+    let hamster = {
+        stomach: [],
+      
+        eat(food) {
+          // assign to this.stomach instead of this.stomach.push
+          this.stomach = [food];
+        }
+      };
+      
+      let speedy = {
+         __proto__: hamster
+      };
+      
+      let lazy = {
+        __proto__: hamster
+      };
+      
+      // Speedy one found the food
+      speedy.eat("apple");
+      alert( speedy.stomach ); // apple
+      
+      // Lazy one's stomach is empty
+      alert( lazy.stomach ); // <nothing>
+
+//====================================================
+
+function Rabbit() {}
+Rabbit.prototype = {
+  eats: true
+};
+
+let rabbit1 = new Rabbit();
+
+delete Rabbit.prototype.eats;
+
+alert( rabbit1.eats ); 
+
+//=======================================================
+Function.prototype.defer = function(ms) {
+    setTimeout(this, ms);
+  };
+  
+  function f() {
+    alert("Hello!");
+  }
+  
+  f.defer(1000); 
+
+  //=======================================================
+  function Rabbit(name) {
+    this.name = name;
+  }
+  Rabbit.prototype.sayHi = function() {
+    alert( this.name );
+  }
+  
+  let rabbit = new Rabbit("Rabbit");
+  
+  rabbit.sayHi();                        // Rabbit
+  Rabbit.prototype.sayHi();              // undefined
+  Object.getPrototypeOf(rabbit).sayHi(); // undefined
+  rabbit.__proto__.sayHi();              // undefined
+
+})();
 
 //==============================Banned work filter===========================
 (function (){
