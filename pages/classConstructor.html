@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- 
-    while working on the banned filter function I wanted to copy the input string array 
-    to another new array. At first my output was odd because when i edit the new array
-    the old one was also affected as the copy was by reference. So, I figured it out that 
-    I can use spread [...array] to make a shallow copy. 
+While trying to delete an element from an array first i used delete array[index] but this was not deleting the array as 
+i expected. I think it deletes the array element but the memory address remains so when i iterate through the array it
+and also check its length the result was not correct. So, I used splice rather than delete. 
 
-    I have completed all the required tasks and it took me around 2 hours to complete.
+    I have completed all the required tasks and it took me around 3 hours to complete.
  -->
  
 <head>
@@ -20,7 +19,6 @@
 </head>
 <body>
     <header><h2>WELCOME!</h2></header>
-    <div><h2 id="message">To see log results please use Chrome developer console (CTRL_SHIFT_J). </h2> </div>
 
     <div id="mocha"></div>
 
@@ -30,7 +28,12 @@
 
     <script src="../scripts/account.js"></script>
     <script src="../scripts/savingAccount.js"></script>
+    <script src="../scripts/checkingAccount.js"></script>
+    <script src="../scripts/bank.js"></script>
+    <script src="../scripts/clock.js"></script>
+
     <script src="../test/accountTest.js"></script>
+    
 
     <footer>
         <div>

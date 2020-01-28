@@ -66,6 +66,10 @@ class Account {
         this._balance -= amount;
     }
 
+    endOfMonth(){
+        return "";
+    }
+
     /**
      * @returns {string} representation of this account
      */

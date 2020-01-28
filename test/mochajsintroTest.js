@@ -42,7 +42,6 @@
       // const myMap = require('../scripts/mochajsintro').myMap;     
       // const myFilter = require('../scripts/mochajsintro').myFilter;     
 
-
       describe('JS TEST WITH MOCHA AND CHAI', function(){
 
         it('Assertion passed: The maximum of 5 and 4 is 5', function(){
