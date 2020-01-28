@@ -28,7 +28,7 @@
       }      
   
        const assert = chai.assert;
-     //  const maxOfTwo = maxTwo(4,5);
+      //  const maxOfTwo = maxTwo(4,5);
       // const maxOfThree = require('../scripts/mochajsintro').maxThree;
       // const isVowel = require('../scripts/mochajsintro').isVowel;
       // const sum = require('../scripts/mochajsintro').sum;
