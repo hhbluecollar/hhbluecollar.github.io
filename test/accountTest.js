@@ -75,8 +75,6 @@
             bank.closeAccount();
             assert.equal(bank.accounts.length,2);
         });    
-    });
-
-    
+    });    
 })();
 
