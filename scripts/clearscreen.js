@@ -1,32 +1,65 @@
-$(function(){
-    
-    $("div.circle").click(function(){$(this).hide();}); 
+$(function () {
 
-    $("#startBtn").click(function(){
+    let width = parseInt($("#width").val());
+    let gAmount = parseInt($("#gAmount").val());
+    let gRate = parseInt($("#gRate").val());
+    let cirNumber = $("#cirNo").val();
+    const $circles = $(".circles");
+    const $aCircle = $("div.aCircle");
+    let myInterval =null;
 
-        let width = $("#width").val();
-        let gAmount = $("#gAmount").val();
-        let gRate = $("#gRate").val();
-        let cirNumber = $("#cirNo").val();
-        const $circles = $(".circles");
+    /**
+     * Define the initial circle parameters
+     */
 
-        for(let i=0;i<cirNumber;i++){
-            $circles.after(' <div class="aCircle"> </div>');
-            console.log(i);
+    for (let i = 0; i < cirNumber; i++) {console.log(100 * i + "px");
+    $circles.append($("<div>", {
+        "class": "aCircle",
+        "css": {
+            "height":width,
+            "display":"inline-block",
+            "margin-right":"-5em",
+            "width": width,
+            "background-color": "#" + Math.floor(Math.random() * 16777215).toString(16),
+            "z-index" : i*2, 
+        }            
+    }))
+}
+
+/**
+ * add the event handlers
+ */
+
+$("div.aCircle").click(function () { $(this).hide(); });
+
+$("div.aCircle").mousemove(function(){
+    $(this).css("opacity",0.1);
+});
+
+$("div.aCircle").mouseleave(function(){
+    $(this).css("opacity",1);
+});
+
+    /**
+     * Start the time interval event and increment size accordingly
+     */
+
+    $("#startBtn").click(function () {
+        
+        if(myInterval){
+            clearInterval(myInterval);
+            myInterval = null;
         }
+
+        myInterval = setInterval(() => {
+            const widthOrginal = parseInt($("div.aCircle").css("width"));
+
+            $("div.aCircle").css({
+                'width': widthOrginal + gAmount + 'px',
+                'height': widthOrginal + gAmount + 'px',
+            })
+
+        }, gRate);
+
     });
-
-// let myInterval = setInterval(() => {
-        //     const width = parseInt($("div.circle").css("width"));
-        //     const height = parseInt($("div.circle").css("height"));
-        //     const radius = parseInt($("div.circle").css("border-radius"));
-
-        //     $("div.circle").css({
-        //         'border-radius': radius+12 + "px",
-        //         'width' : width + 12 + 'px',
-        //         'height': height + 12 + 'px',
-        //         'border-color': 'red'
-        //     })
-
-        // }, 250);
 });

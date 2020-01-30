@@ -1,17 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+
 div.aCircle{
-    border-radius: 100px;
+    border-radius: 50%;
     border: 2px solid black;
     height: 150px;
     width: 150px;
     margin: auto;
-    margin-top: 200px;
-    position: relative;
 }
-.circles{
-    display: flex;
-}
-#messageBoard{
 
+.circles{
+    margin-top: 100px;
+
+}
+
+#messageBoard{
     margin: 15px;
     position: fixed;
     bottom: 0px;

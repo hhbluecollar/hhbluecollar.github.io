@@ -1,6 +1,12 @@
 
 <!DOCTYPE html>
 <html lang="en">
+    <!-- 
+        From this assignment I have learned how to handle event handlers and also how to traverse 
+        nodes using jQuery. I was a bit confused trying to imitate the sample output and that took 
+        me a while with no real success. So finally I decided to use inline-block display. It took
+        me around 3 hours to complete it. 
+     -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,21 +19,21 @@
 </head>
 <body>
     <div class="circles">    
-        <div class="aCircle"> </div>
+        <!-- <div class="aCircle"> </div> -->
     </div>
 
     <div id = "messageBoard"> 
         <label class= labels for="width">Width</label>
         <div><input class = "textBox" type="number" name="width" id="width" value=150></div>
 
-        <label class= labels for="width"> Growth Amount</label>
+        <label class= labels for="gAmount"> Growth Amount</label>
         <div><input class = "textBox" type="number" name="gAmount" id="gAmount" value=12></div>
 
-        <label class= labels  for="width"> Growth Rate</label>
+        <label class= labels  for="gRate"> Growth Rate</label>
         <div><input class = "textBox" type="number" name="gRate" id="gRate" value=250></div>
 
-        <label class= labels  for="width"> Number Circle</label>
-        <div><input class = "textBox" type="number" name="cirNo" id="cirNo" value=1></div>
+        <label class= labels  for="cirNo"> Number Circle</label>
+        <div><input class = "textBox" type="number" name="cirNo" id="cirNo" value=12></div>
         
         <div> <input id= "startBtn" type="button" value="Start"></div>
     </div>
